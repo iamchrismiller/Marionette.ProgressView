@@ -1,0 +1,10 @@
+{
+  "name"         : "marionette-progressview",
+  "version"      : "0.0.1",
+  "main"         : "./src/marionette.progressview.js",
+  "dependencies" : {
+    "jquery"     : "latest",
+    "marionette" : "1.0.0-beta4"
+  }
+}
+
