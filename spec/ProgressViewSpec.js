@@ -1,4 +1,4 @@
-/*globals Marionette, beforeEach, $, require, jasmine, describe, it, expect, loadFixtures, Backbone*/
+/*globals Marionette, beforeEach, $, require, jasmine, describe, it, expect, loadFixtures*/
 
 describe("ProgressView", function () {
   "use strict";

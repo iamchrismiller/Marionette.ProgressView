@@ -1,16 +1,16 @@
 /*jshint*/
-/*global Backbone,define*/
+/*global Marionette,define*/
 
 ;(function (root, factory) {
   "use strict";
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['marionette','jquery','underscore'], factory);
+    define(['marionette','underscore'], factory);
   } else {
     // Browser globals
-    root.Marionette.ProgressView = factory(root.Marionette,root.jQuery,root._);
+    root.Marionette.ProgressView = factory(root.Marionette,root._);
   }
-}(this, function (Marionette,$,_) {
+}(this, function (Marionette,_) {
   "use strict";
 
   var ProgressView = Marionette.ItemView.extend({
