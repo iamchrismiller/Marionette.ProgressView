@@ -7,4 +7,8 @@ describe("ProgressView", function () {
 
   });
 
+  it('Should have tests', function() {
+
+  });
+
 });
