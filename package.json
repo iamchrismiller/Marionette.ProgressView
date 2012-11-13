@@ -1,7 +1,7 @@
 {
   "name"            : "marionette-progressview",
   "description"     : "ProgressView Plugin For Backbone.Marionette",
-  "version"         : "0.1.0",
+  "version"         : "0.2.0",
   "author"          : {
     "name"  : "Chris Miller",
     "email" : "cmiller@onehealth.com",
