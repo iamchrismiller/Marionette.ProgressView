@@ -1,4 +1,4 @@
-# Marionette.ProgressView
+# Marionette.ProgressView [![Build Status](https://travis-ci.org/onehealth/marionette.formview.png?branch=master)](https://travis-ci.org/onehealth/marionette.formview)
 
 A Flexible and customizable Backbone.Marionette Progress Series View.
 
