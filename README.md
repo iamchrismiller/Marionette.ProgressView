@@ -5,8 +5,8 @@ A Flexible and customizable Backbone.Marionette Progress Series View.
 What does that mean?
 
   - Easily Extensible to do what you need when loading views in order
-  - onUpdate / onCompletion methods for view events
-  - Current Count / Completion Percentage methods
+  - onUpdate / onComplete methods for view events
+  - Current Completion Percentage method
   - Custom Container Template
   - Start with any view index
   - Trigger Next / Previous load within the loaded view
@@ -24,7 +24,7 @@ What does that mean?
 
 ## Usage
 
-  Options :
+  ###Options :
 
    - template -> (string/function) Use a custom container template
    - viewContainer -> (string) Where to place the views on render
@@ -57,7 +57,6 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 
 ## License
 
-Copyright (c) 2012 OneHealth Solutions, Inc
 Licensed under the Apache 2.0 license.
 
 ## Author
