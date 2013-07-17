@@ -1,0 +1,32 @@
+{
+  "curly"   : false,
+  "eqeqeq"  : true,
+  "immed"   : true,
+  "latedef" : true,
+  "newcap"  : true,
+  "noarg"   : true,
+  "sub"     : true,
+  "undef"   : true,
+  "boss"    : true,
+  "eqnull"  : true,
+  "maxerr"  : 100000,
+  "es5"     : true,
+  "browser"     : true,
+  "globals" : {
+    "Marionette" : false,
+    "console"    : false,
+    "$"          : false,
+    "jQuery"     : false,
+    "Backbone"   : false,
+    "define"     : false,
+    "require"    : false,
+    "_"          : false,
+    "it"         : false,
+    "xit"        : false,
+    "describe"   : false,
+    "beforeEach" : false,
+    "afterEach"  : false,
+    "expect"     : false,
+    "spyOn"      : false
+  }
+}

@@ -4,7 +4,7 @@
   "main"         : "./src/marionette.progressview.js",
   "dependencies" : {
     "jquery"     : "latest",
-    "marionette" : "1.0.0-beta4"
+    "marionette" : "1.0.0"
   }
 }
 

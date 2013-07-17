@@ -1,4 +1,3 @@
-/*jshint*/
 /*global Marionette,define*/
 
 ;(function (root, factory) {
@@ -15,34 +14,68 @@
 
   var ProgressView = Marionette.ItemView.extend({
 
-    currentIndex : 0,
+    template : _.template("<div class='content'></div>"),
+
+    viewIndex : 0,
 
     views : [],
 
     //When Using a template
-    //You can attach the Views To A Specific Selector
-    viewContainer : null,
+    //attach the Views To A Specific Selector
+    viewContainer : '.content',
 
     constructor : function(){
       Marionette.View.prototype.constructor.apply(this, arguments);
-      if (!this.views) throw new Error("Views Must Be Provided");
-      if (this.options.onComplete) this.onComplete = this.options.onComplete;
-      if (this.options.viewContainer) this.viewContainer = this.options.viewContainer;
+
+      if (!this.views || _.isEmpty(this.views)) {
+        throw new Error("Views Must Be Provided");
+      }
+
+      if (this.options.viewContainer) {
+        this.viewContainer = this.options.viewContainer;
+      }
+
       this.on('show render', this.showView);
     },
 
     showView : function() {
       if (!this.currentView) {
-        var View = this.views[this.currentIndex];
-        this.currentView = new View();
+        this.currentView = new this.views[this.viewIndex]();
       }
-
       this.currentView.render();
+      this._initListeners();
+      this._appendView();
+    },
 
-      this.eventBinder.bindTo(this.currentView, 'prev:item', this.loadPreviousView, this);
-      this.eventBinder.bindTo(this.currentView, 'next:item', this.loadNextView, this);
-      this.eventBinder.bindTo(this.currentView, 'close:progress', this.close, this);
+    getViewCount : function() {
+      return this.views.length;
+    },
 
+    getCurrentCompletion : function() {
+      return (this.viewIndex / this.views.length) * 100;
+    },
+
+    loadPreviousView : function() {
+      this.viewIndex--;
+      this._loadView();
+    },
+
+    loadNextView : function() {
+      this.viewIndex++;
+      this._loadView();
+    },
+
+    _loadView : function (){
+      this._handleProgress();
+      this._cleanupCurrentView();
+      if (this.getViewCount() > this.viewIndex) {
+        this.showView();
+      } else {
+        this._handleComplete();
+      }
+    },
+
+    _appendView : function() {
       if (this.viewContainer) {
         this.$(this.viewContainer).append(this.currentView.$el);
       } else {
@@ -50,37 +83,25 @@
       }
     },
 
-    getCompletion : function() {
-      return (this.currentIndex / this.views.length) * 100;
-    },
-
-    //@todo Re-address
-    loadPreviousView : function() {
-      this.currentIndex--;
-      this.loadView();
-    },
-
-    //@todo Re-address
-    loadNextView : function() {
-      this.currentIndex++;
-      this.loadView();
-    },
-
-    loadView : function (){
-      var totalViews = this.views.length;
-      if (_.isFunction(this.onProgress)) this.onProgress(this.getCompletion());
-
-      //Cleanup Previous View
+    _cleanupCurrentView : function() {
       this.currentView.close();
       this.currentView = null;
+    },
 
-      if (totalViews > this.currentIndex) {
-        //Load the next view
-        this.showView();
-      } else {
-        //Call Completion Handler
-        if (_.isFunction(this.onComplete)) this.onComplete();
+    _initListeners : function() {
+      this.listenTo(this.currentView, 'prev:item', this.loadPreviousView, this);
+      this.listenTo(this.currentView, 'next:item', this.loadNextView, this);
+      this.listenTo(this.currentView, 'close:progress', this.close, this);
+    },
+
+    _handleProgress : function() {
+      if (_.isFunction(this.onProgress)) {
+        this.onProgress(this.getCurrentCompletion());
       }
+    },
+
+    _handleComplete: function() {
+      if (_.isFunction(this.onComplete)) this.onComplete();
     }
   });
 

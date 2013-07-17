@@ -12,6 +12,7 @@ var ProgressView = Marionette.ProgressView.extend({
   views : [View1, View2, View3],
 
   onProgress : function (completion) {
+    //bootstrap progress bar
     this.$(this.ui.progress).width(completion + "%");
   },
 

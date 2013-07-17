@@ -41,9 +41,9 @@
 
       this.currentView.render();
 
-      this.eventBinder.bindTo(this.currentView, 'prev:item', this.loadPreviousView, this);
-      this.eventBinder.bindTo(this.currentView, 'next:item', this.loadNextView, this);
-      this.eventBinder.bindTo(this.currentView, 'close:progress', this.close, this);
+      this.listenTo(this.currentView, 'prev:item', this.loadPreviousView, this);
+      this.listenTo(this.currentView, 'next:item', this.loadNextView, this);
+      this.listenTo(this.currentView, 'close:progress', this.close, this);
 
       if (this.viewContainer) {
         this.$(this.viewContainer).append(this.currentView.$el);
