@@ -29,13 +29,13 @@
         },
         dist: {
           files: {
-            'dist/Marionette.Progress.min.js': ['src/Marionette.Progress.js']
+            'dist/marionette.progressview.min.js': ['src/marionette.progressview.js']
           }
         }
       },
 
       jshint: {
-        files: ['Gruntfile.js', 'src/**/*.js', 'test/**/*.js','!test/helper/**/*.js'],
+        files: ['src/**/*.js', 'test/**/*.js','!test/helper/**/*.js'],
         options : {
           jshintrc : './.jshintrc'
         }

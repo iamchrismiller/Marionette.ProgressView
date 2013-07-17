@@ -10,7 +10,6 @@
   "boss"    : true,
   "eqnull"  : true,
   "maxerr"  : 100000,
-  "es5"     : true,
   "browser"     : true,
   "globals" : {
     "Marionette" : false,
