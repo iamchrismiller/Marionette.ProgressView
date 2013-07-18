@@ -51,6 +51,10 @@
       return this.views.length;
     },
 
+    getCurrentIndex : function() {
+      return this.viewIndex;
+    },
+
     getCurrentCompletion : function() {
       return (this.viewIndex / this.views.length) * 100;
     },
@@ -96,7 +100,7 @@
 
     _handleProgress : function() {
       if (_.isFunction(this.onProgress)) {
-        this.onProgress(this.getCurrentCompletion());
+        this.onProgress(this.getCurrentCompletion(), this.getCurrentIndex());
       }
     },
 
