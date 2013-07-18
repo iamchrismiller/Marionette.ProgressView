@@ -54,6 +54,7 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 
 - 0.1.0 Initial release
 - 0.2.0 Updated Backbone listenTo/BindTo handlers, expose getViewCount, added default template
+- 0.2.1 Added Current Index to onUpdate method
 
 ## License
 
