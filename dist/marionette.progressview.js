@@ -35,7 +35,7 @@
         this.viewContainer = this.options.viewContainer;
       }
 
-      this.on('show render', this.showView);
+      this.on('render', this.showView);
     },
 
     showView : function() {
@@ -85,6 +85,10 @@
       } else {
         this.$el.append(this.currentView.$el);
       }
+    },
+
+    onBeforeClose : function() {
+      this.onComplete();
     },
 
     _cleanupCurrentView : function() {
