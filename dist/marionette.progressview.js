@@ -87,10 +87,6 @@
       }
     },
 
-    onBeforeClose : function() {
-      this.onComplete();
-    },
-
     _cleanupCurrentView : function() {
       this.currentView.close();
       this.currentView = null;
