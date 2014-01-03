@@ -1,4 +1,4 @@
-# Marionette.ProgressView [![Build Status](https://travis-ci.org/onehealth/marionette.formview.png?branch=master)](https://travis-ci.org/onehealth/marionette.formview)
+# Marionette.ProgressView [![Build Status](https://travis-ci.org/onehealth/marionette.progressview.png?branch=master)](https://travis-ci.org/onehealth/marionette.progressview)
 
 A Flexible and customizable Backbone.Marionette Progress Series View.
 
@@ -56,6 +56,7 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 - 0.2.0 Updated Backbone listenTo/BindTo handlers, expose getViewCount, added default template
 - 0.2.1 Added Current Index to onUpdate method
 - 0.2.2 Added onBeforeClose method to call onComplete method
+- 0.2.3 Removed Unnecessary onBeforeClose call
 
 ## License
 

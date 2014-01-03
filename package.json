@@ -1,7 +1,7 @@
 {
   "name": "marionette-progressview",
   "description": "ProgressView Plugin For Backbone.Marionette",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "author": {
     "name": "Chris Miller",
     "email": "cmille142@gmail.com",
