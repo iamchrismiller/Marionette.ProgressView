@@ -24,12 +24,12 @@ What does that mean?
 
 ## Usage
 
-Options:
+  ###Options :
 
-   - template -> (string/function) Use a custom container template
-   - viewContainer -> (string) Where to place the views on render
-   - viewIndex -> (int) Which view to start with
-   - views -> (array) Views to load in array order
+   - `template` -> (string/function) Use a custom container template
+   - `viewContainer` -> (string) Where to place the views on render
+   - `viewIndex` -> (int) Which view to start with
+   - `views` -> (array) Views to load in array order
 
   ```
     var sequentialProgressView = Marionette.ProgressView.extend({
