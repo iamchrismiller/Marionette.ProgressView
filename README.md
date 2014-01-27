@@ -1,4 +1,4 @@
-# Marionette.ProgressView [![Build Status](https://api.travis-ci.org/iamchrismiller/Marionette.ProgressView.png?branch=master)](https://api.travis-ci.org/iamchrismiller/Marionette.ProgressView.png?branch=master)
+# Marionette.ProgressView [![Build Status](https://api.travis-ci.org/iamchrismiller/Marionette.ProgressView.png?branch=master)](https://api.travis-ci.org/iamchrismiller/Marionette.ProgressView.png?branch=master) [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/iamchrismiller/marionette.progressview/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
 A Flexible and customizable Backbone.Marionette Progress Series View.
 
