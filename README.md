@@ -24,7 +24,7 @@ What does that mean?
 
 ## Usage
 
-  ###Options :
+### Options :
 
    - `template` -> (string/function) Use a custom container template
    - `viewContainer` -> (string) Where to place the views on render
